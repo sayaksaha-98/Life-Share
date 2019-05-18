@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GiveDetailsActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/etPatientName"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Patient's Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/spSelectState"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spSlectBloodReq"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="47dp"
+        android:entries="@array/blood_groups"
+        app:layout_constraintBottom_toTopOf="@+id/etPatientPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spSelectDistrict" />
+
+    <Spinner
+        android:id="@+id/spSelectState"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="47dp"
+        android:entries="@array/state_names"
+        app:layout_constraintBottom_toTopOf="@+id/spSelectDistrict"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPatientName" />
+
+    <EditText
+        android:id="@+id/etHospitalName"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="47dp"
+        android:ems="10"
+        android:hint="Hospital Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnSendReq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPatientPhone" />
+
+    <Button
+        android:id="@+id/btnSendReq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="20dp"
+        android:text="Send Request"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etHospitalName" />
+
+    <EditText
+        android:id="@+id/etPatientPhone"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="47dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/etHospitalName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spSlectBloodReq" />
+
+    <Spinner
+        android:id="@+id/spSelectDistrict"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="47dp"
+        app:layout_constraintBottom_toTopOf="@+id/spSlectBloodReq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spSelectState" />
+</android.support.constraint.ConstraintLayout>

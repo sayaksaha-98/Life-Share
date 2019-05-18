@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".ViewRequestsActivity">
+
+    <Spinner
+        android:id="@+id/spChStateReq"
+        android:layout_width="249dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:background="#FFDADA"
+        android:entries="@array/state_names" />
+
+    <Spinner
+        android:id="@+id/spChDistrictReq"
+        android:layout_width="249dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/spChStateReq"
+        android:layout_below="@+id/spChStateReq"
+        android:background="#FFDADA" />
+
+    <Spinner
+        android:id="@+id/spChBloodReq"
+        android:layout_width="249dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/spChStateReq"
+        android:layout_below="@+id/spChDistrictReq"
+        android:background="#FFDADA"
+        android:entries="@array/blood_groups" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/spChBloodReq"
+        android:layout_marginTop="2dp"
+        android:background="#fff"
+        android:fontFamily="cursive"
+        android:padding="10dp"
+        android:text="Nearby Requests"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnApplyReq"
+        android:layout_width="110dp"
+        android:layout_height="58dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="33dp"
+        android:background="@color/colorPrimary"
+        android:text="Apply"
+        android:textColor="#fff" />
+
+    <ListView
+        android:id="@+id/liRequests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="192dp"
+        android:background="#FFDADA"
+        android:divider="@color/colorAccent"
+        android:dividerHeight="1.5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+</RelativeLayout>
